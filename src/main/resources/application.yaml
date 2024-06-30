@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: VadarodTestTask
+  datasource:
+    url: jdbc:h2:mem:bank_db
+    username: username
+    password: password
+    driverClassName: org.h2.Driver
+    jpa:
+      database-platform:
+        org.hibernate.dialect.H2Dialect:
+  h2:
+    console:
+      enabled: true

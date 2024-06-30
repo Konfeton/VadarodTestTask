@@ -1,0 +1,31 @@
+#all exchange rates without date param (date = today)
+GET http://localhost:8080/api/v1/exchangeRates
+
+###
+#all exchange rates with incorrect date
+GET http://localhost:8080/api/v1/exchangeRates?date=1
+
+###
+#all exchange rates with empty date (date = today)
+GET http://localhost:8080/api/v1/exchangeRates?date=
+
+
+###
+#all exchange rates with correct date
+GET http://localhost:8080/api/v1/exchangeRates?date=2024-06-30
+
+###
+#exchange rate with invalid currency cod
+GET http://localhost:8080/api/v1/exchangeRates/FFF?date=2024-06-30
+
+###
+#exchange rate with valid currency cod
+GET http://localhost:8080/api/v1/exchangeRates/USD?date=2024-06-30
+
+###
+#exchange rate with invalid date
+GET http://localhost:8080/api/v1/exchangeRates/USD?date=2024-06-33
+
+###
+#exchange rate with invalid date and code
+GET http://localhost:8080/api/v1/exchangeRates/FFF?date=2024-06-
